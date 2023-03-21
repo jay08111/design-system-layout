@@ -1,7 +1,7 @@
 export const header = [
     {
         id: 1,
-        word: "로고랑께",
+        word: "로고",
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const header = [
     },
     {
         id: 6,
-        word: "퀵버튼이랑께",
+        word: "퀵버튼",
     },
 ];
 

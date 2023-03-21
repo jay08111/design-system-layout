@@ -44,6 +44,11 @@
     font-size: 18px;
 }
 
+.main-aside {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+}
+
 .header-one {
     display: flex;
     align-items: center;

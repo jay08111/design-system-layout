@@ -1,10 +1,9 @@
 function PageTwo() {
     return (
         <main className="main-one main-aside">
-            {/*  */}
-            <aside>aside</aside>
+            <aside className="aside-two">aside</aside>
             <section>
-                <header>
+                <header className="header-two">
                     <nav>nav</nav>
                 </header>
                 <div>section</div>

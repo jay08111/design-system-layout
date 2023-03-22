@@ -120,3 +120,12 @@
 .inner-container-side-menu {
     border-right: var(--border);
 }
+
+.aside-two {
+    border-right: var(--border);
+}
+
+.header-two {
+    border-bottom: var(--border);
+    height: 40px;
+}

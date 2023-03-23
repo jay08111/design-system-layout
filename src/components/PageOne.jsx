@@ -10,6 +10,8 @@ function PageOne() {
     const [innerHeight, setInnerHeight] = useState(40);
     const [innerPadding, setInnerPadding] = useState(40);
     const [gridWidth, setGridWidth] = useState(200);
+    const [asideType, setAsideType] = useState("grid");
+    const [toggleAside, setToggleAside] = useState(true);
 
     return (
         <main className="main-one">
@@ -70,26 +72,29 @@ function PageOne() {
                             height: "100%",
                         }}
                     >
-                        <div className="inner-container-side-menu">
-                            <ul
-                                style={{
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    gap: "20px",
-                                    padding: "15px",
-                                }}
-                            >
-                                {sideMenu.map((el) => (
-                                    <li
-                                        style={{
-                                            listStyle: "none",
-                                        }}
-                                    >
-                                        {el.word}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        {toggleAside && (
+                            <div className="inner-container-side-menu">
+                                <ul
+                                    style={{
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        gap: "20px",
+                                        padding: "15px",
+                                    }}
+                                >
+                                    {sideMenu.map((el) => (
+                                        <li
+                                            style={{
+                                                listStyle: "none",
+                                            }}
+                                        >
+                                            {el.word}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+
                         <div
                             style={{
                                 display: "flex",
@@ -99,6 +104,24 @@ function PageOne() {
                                 marginTop: "15px",
                             }}
                         >
+                            <div
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    gap: "15px",
+                                }}
+                            >
+                                왼쪽사이드 메뉴 토글
+                                <div>
+                                    <button
+                                        onClick={() =>
+                                            setToggleAside(!toggleAside)
+                                        }
+                                    >
+                                        {toggleAside ? "가리기" : "보여줘?"}
+                                    </button>
+                                </div>
+                            </div>
                             <div
                                 style={{
                                     display: "flex",

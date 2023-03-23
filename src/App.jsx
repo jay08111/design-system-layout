@@ -1,28 +1,28 @@
 import { useState } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+
 import PageOne from "./components/PageOne";
 import PageTwo from "./components/PageTwo";
+import PageThree from "./components/PageThree";
+import PageFour from "./components/PageFour";
 
 function App() {
     const [slide, setSlide] = useState(0);
 
     function onClickShowNext() {
         setSlide(slide + 1);
-        if (slide === 1) {
+        if (slide === 3) {
             setSlide(0);
         }
-        console.log(slide, "slide");
     }
 
     function onClickShowPrev() {
         setSlide(slide - 1);
 
         if (slide === 0) {
-            setSlide(1);
+            setSlide(3);
         }
-
-        console.log(slide, "slide2");
     }
 
     function displayPageShows() {
@@ -31,23 +31,30 @@ function App() {
                 return <PageOne />;
             case 1:
                 return <PageTwo />;
+            case 2:
+                return <PageThree />;
+            case 3:
+                return <PageFour />;
             default:
                 break;
         }
     }
 
     return (
-        <div className="all-wrapper">
-            <AiOutlineArrowLeft
-                className="arrow-left"
-                onClick={() => onClickShowPrev()}
-            />
-            {displayPageShows()}
-            <AiOutlineArrowRight
-                className="arrow-right"
-                onClick={() => onClickShowNext()}
-            />
-        </div>
+        <section className="all-section">
+            <div className="all-wrapper">
+                <AiOutlineArrowLeft
+                    className="arrow-left"
+                    onClick={() => onClickShowPrev()}
+                />
+                {displayPageShows()}
+                <AiOutlineArrowRight
+                    className="arrow-right"
+                    onClick={() => onClickShowNext()}
+                />
+            </div>
+            <span className="currentPage">{slide + 1} / 4</span>
+        </section>
     );
 }
 

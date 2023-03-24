@@ -6,6 +6,7 @@ import PageOne from "./components/PageOne";
 import PageTwo from "./components/PageTwo";
 import PageThree from "./components/PageThree";
 import PageFour from "./components/PageFour";
+import PageFive from "./components/PageFive";
 
 function App() {
     const [slide, setSlide] = useState(0);
@@ -35,6 +36,8 @@ function App() {
                 return <PageThree />;
             case 3:
                 return <PageFour />;
+            // case 4:
+            //     return <PageFive />;
             default:
                 break;
         }

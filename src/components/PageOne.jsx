@@ -111,6 +111,24 @@ function PageOne() {
                                     gap: "15px",
                                 }}
                             >
+                                애플은 가운데 길이 980를 사용하더라구요.
+                                <div>
+                                    <button
+                                        onClick={() =>
+                                            setToggleAside(!toggleAside)
+                                        }
+                                    >
+                                        {toggleAside ? "가리기" : "보여줘?"}
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    gap: "15px",
+                                }}
+                            >
                                 왼쪽사이드 메뉴 토글
                                 <div>
                                     <button

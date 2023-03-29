@@ -2,7 +2,7 @@ import { header, footer, sideMenu } from "../../data";
 import { useState } from "react";
 
 function PageOne() {
-    const [size, setSize] = useState(1300);
+    const [size, setSize] = useState(980);
     const [fontSize, setFontSize] = useState(16);
     const [headerFont, setHeaderFont] = useState(18);
     const [footerHeight, setFooterHeight] = useState(120);
